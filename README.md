@@ -194,4 +194,3 @@ For questions or support, please open an issue on GitHub.
 
 ---
 
-Made with ❤️ using Google Gemini AI
