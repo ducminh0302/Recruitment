@@ -1,107 +1,197 @@
-# AI Recruitment Pipeline
+# 🤖 AI Recruitment Pipeline
 
-Ứng dụng tuyển dụng thông minh sử dụng AI để tự động hóa quy trình tuyển dụng từ A-Z.
+An intelligent recruitment platform powered by Google Gemini AI that automates the entire hiring process from job description to final candidate evaluation.
 
-## Tính năng
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.2-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- 📝 **Phase 0**: Mô tả công việc (Job Description)
-- 📄 **Phase 1**: Quét và phân tích CV
-- 🤖 **Phase 2**: Sàng lọc ứng viên bằng AI
-- ❓ **Phase 3**: Tạo câu hỏi phỏng vấn
-- 💬 **Phase 4**: Phỏng vấn với AI
-- 📊 **Phase 5**: Báo cáo đánh giá chi tiết
+## ✨ Features
 
-## Công nghệ sử dụng
+- **📝 Phase 0: Job Description** - Create comprehensive job descriptions with AI assistance
+- **📄 Phase 1: CV Scanning** - Automatically extract and analyze candidate information from CVs
+- **🤖 Phase 2: AI Screening** - Intelligent candidate screening based on job requirements
+- **❓ Phase 3: Question Generation** - Auto-generate relevant interview questions
+- **💬 Phase 4: AI Interview** - Conduct AI-powered interviews with real-time responses
+- **📊 Phase 5: Final Report** - Generate detailed evaluation reports with visualizations
 
-- React 19
-- TypeScript
-- Vite
-- Google Gemini AI
-- Recharts
+## 🚀 Tech Stack
 
-## Chạy ở Local
+- **Frontend Framework:** React 19 with TypeScript
+- **Build Tool:** Vite
+- **AI Engine:** Google Gemini AI
+- **Data Visualization:** Recharts
+- **Styling:** Tailwind CSS
+- **State Management:** React Context API
 
-**Yêu cầu:** Node.js (phiên bản 18 trở lên)
+## 📋 Prerequisites
 
-1. Clone repository:
-   ```bash
-   git clone <repository-url>
-   cd ai-recruitment-pipeline
-   ```
+Before you begin, ensure you have the following installed:
 
-2. Cài đặt dependencies:
-   ```bash
-   npm install
-   ```
+- **Node.js** (v18.0 or higher)
+- **npm** or **yarn** package manager
+- **Google Gemini API Key** ([Get it here](https://makersuite.google.com/app/apikey))
 
-3. Tạo file `.env` và thêm API key của Gemini:
-   ```bash
-   cp env.example .env
-   ```
-   Sau đó mở file `.env` và thêm API key:
-   ```
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-   Lấy API key tại: https://makersuite.google.com/app/apikey
+## 🛠️ Installation
 
-4. Chạy ứng dụng:
-   ```bash
-   npm run dev
-   ```
+1. **Clone the repository:**
 
-5. Mở trình duyệt và truy cập: http://localhost:3000
+```bash
+git clone https://github.com/ducminh0302/Recruitment.git
+cd ai-recruitment-pipeline
+```
 
-## Deploy lên Vercel
+2. **Install dependencies:**
 
-### Cách 1: Deploy qua Vercel Dashboard (Khuyến nghị)
+```bash
+npm install
+```
 
-1. Push code lên GitHub repository của bạn
-2. Truy cập [Vercel Dashboard](https://vercel.com/dashboard)
-3. Click "Add New Project"
-4. Import repository từ GitHub
-5. Vercel sẽ tự động phát hiện cấu hình Vite
-6. Thêm Environment Variable:
-   - Key: `GEMINI_API_KEY`
-   - Value: API key của bạn
-7. Click "Deploy"
+3. **Set up environment variables:**
 
-### Cách 2: Deploy qua Vercel CLI
+```bash
+cp env.example .env
+```
 
-1. Cài đặt Vercel CLI:
-   ```bash
-   npm i -g vercel
-   ```
+Open the `.env` file and add your Gemini API key:
 
-2. Login vào Vercel:
-   ```bash
-   vercel login
-   ```
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
 
-3. Deploy:
-   ```bash
-   vercel
-   ```
+4. **Start the development server:**
 
-4. Thêm environment variable:
-   ```bash
-   vercel env add GEMINI_API_KEY
-   ```
+```bash
+npm run dev
+```
 
-### Lưu ý khi deploy
+5. **Open your browser:**
 
-- Đảm bảo đã thêm `GEMINI_API_KEY` vào Environment Variables trong Vercel
-- Build command mặc định: `npm run build`
-- Output directory: `dist`
-- Node version: 18.x hoặc mới hơn
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Build cho Production
+## 📦 Build for Production
 
 ```bash
 npm run build
 ```
 
-Build output sẽ được tạo trong thư mục `dist/`.
+The production-ready build will be generated in the `dist/` directory.
 
-## License
+To preview the production build locally:
 
-MIT
+```bash
+npm run preview
+```
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Recommended)
+
+#### Option 1: Via Vercel Dashboard
+
+1. Push your code to GitHub
+2. Visit [Vercel Dashboard](https://vercel.com/dashboard)
+3. Click **"Add New Project"**
+4. Import your GitHub repository
+5. Vercel will automatically detect the Vite configuration
+6. Add environment variable:
+   - **Key:** `GEMINI_API_KEY`
+   - **Value:** Your Gemini API key
+7. Click **"Deploy"**
+
+Your app will be live in ~2 minutes! 🚀
+
+#### Option 2: Via Vercel CLI
+
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
+
+# Login to your Vercel account
+vercel login
+
+# Deploy
+vercel
+
+# Add environment variable
+vercel env add GEMINI_API_KEY
+```
+
+### Deploy to Other Platforms
+
+This app can be deployed to any platform that supports static sites:
+
+- **Netlify**: Connect your GitHub repo and set build command to `npm run build`
+- **AWS Amplify**: Import from GitHub with build settings
+- **GitHub Pages**: Use `gh-pages` branch for deployment
+
+**Important:** Always set the `GEMINI_API_KEY` environment variable in your deployment platform.
+
+## 📁 Project Structure
+
+```
+ai-recruitment-pipeline/
+├── components/
+│   ├── phases/
+│   │   ├── Phase0_JobDescription.tsx
+│   │   ├── Phase1_CVScanner.tsx
+│   │   ├── Phase2_AIScreening.tsx
+│   │   ├── Phase3_QuestionGeneration.tsx
+│   │   ├── Phase4_AIInterview.tsx
+│   │   └── Phase5_Report.tsx
+│   ├── icons.tsx
+│   ├── Loader.tsx
+│   └── StepIndicator.tsx
+├── context/
+│   └── RecruitmentContext.tsx
+├── services/
+│   └── geminiService.ts
+├── App.tsx
+├── index.tsx
+├── types.ts
+└── vite.config.ts
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `GEMINI_API_KEY` | Google Gemini API key for AI features | ✅ Yes |
+
+### Vite Configuration
+
+The project uses a custom Vite configuration (`vite.config.ts`) that:
+- Serves on port 3000
+- Exposes the server on `0.0.0.0` for network access
+- Injects environment variables at build time
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Powered by [Google Gemini AI](https://ai.google.dev/)
+- Built with [React](https://reactjs.org/) and [Vite](https://vitejs.dev/)
+- UI components styled with [Tailwind CSS](https://tailwindcss.com/)
+
+## 📧 Contact
+
+For questions or support, please open an issue on GitHub.
+
+---
+
+Made with ❤️ using Google Gemini AI
