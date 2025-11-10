@@ -1,0 +1,5 @@
+{
+  "name": "AI Recruitment Pipeline",
+  "description": "An AI-powered application to automate the recruitment process, from analyzing job descriptions and screening CVs to generating interview questions and creating final reports for management.",
+  "requestFramePermissions": []
+}
