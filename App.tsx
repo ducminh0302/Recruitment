@@ -8,7 +8,6 @@ import Phase4_AIInterview from './components/phases/Phase4_AIInterview';
 import Phase5_Report from './components/phases/Phase5_Report';
 import { StepIndicator } from './components/StepIndicator';
 import { AppPhase } from './types';
-import { GithubIcon } from './components/icons';
 
 const AppContent: React.FC = () => {
     const { state, dispatch } = useRecruitmentContext();
@@ -36,11 +35,8 @@ const AppContent: React.FC = () => {
         <div className="min-h-screen bg-gray-100 text-gray-800 font-sans">
             <header className="bg-white/80 backdrop-blur-sm sticky top-0 z-10 border-b border-gray-200">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
+                    <div className="flex items-center justify-center h-16">
                          <h1 className="text-xl md:text-2xl font-bold text-blue-600">AI Recruitment Pipeline</h1>
-                         <a href="https://github.com/google/generative-ai-docs/tree/main/site/en/gemini-api/docs/examples/prompts" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors">
-                            <GithubIcon className="w-6 h-6" />
-                         </a>
                     </div>
                 </div>
             </header>
